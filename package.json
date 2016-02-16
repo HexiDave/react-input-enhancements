@@ -10,7 +10,8 @@
     "lint": "eslint src",
     "version": "npm run build:demo && git add -A .",
     "postversion": "git push",
-    "prepublish": "npm run build:lib"
+    "prepublish": "npm run build:lib",
+	"install": "npm run build:lib"
   },
   "main": "lib/index.js",
   "repository": {
