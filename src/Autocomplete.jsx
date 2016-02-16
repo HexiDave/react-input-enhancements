@@ -124,7 +124,8 @@ export default class Autocomplete extends Component {
   handleKeyDown = e => {
     const keyMap = {
       Backspace: this.handleBackspaceKeyDown,
-      Enter: this.handleEnterKeyDown
+      Enter: this.handleEnterOrTabKeyDown,
+      Tab: this.handleEnterOrTabKeyDown
     }
 
     if (keyMap[e.key]) {
@@ -145,7 +146,7 @@ export default class Autocomplete extends Component {
     }
   }
 
-  handleEnterKeyDown = () => {
+  handleEnterOrTabKeyDown = () => {
     const input = this.getInput();
 
     setSelection(input, this.state.matchingText, this.state.matchingText);
